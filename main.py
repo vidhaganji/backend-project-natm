@@ -21,6 +21,8 @@ from projects.projects import app_projects # Blueprint directory import projects
 # Initialize the SQLAlchemy object to work with the Flask app instance
 db.init_app(app)
 
+app.register_blueprint(rest_countries_api)
+
 # register URIs
 app.register_blueprint(joke_api) # register api routes
 app.register_blueprint(covid_api) # register api routes
